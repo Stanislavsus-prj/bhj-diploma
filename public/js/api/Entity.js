@@ -13,7 +13,6 @@ class Entity {
     return createRequest({
             method: 'GET',
             url: this.URL,
-            responseType: 'json',
             data,
             callback: callback
         });
@@ -28,7 +27,6 @@ class Entity {
     return createRequest({
             url: this.URL,
             method: 'PUT',
-            responseType: 'json',
             data,
             callback: callback
         });
@@ -42,7 +40,6 @@ class Entity {
     return createRequest({
             url: this.URL,
             method: 'DELETE',
-            responseType: 'json',
             data,
             callback: callback
         });

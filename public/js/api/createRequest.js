@@ -7,16 +7,14 @@ const createRequest = (options = {}) => {
         {
             method = 'GET',
             callback = func,
-            responseType,
-            async = true,
+            responseType = 'json',
             data = {}
         } = options;
 
 	const xhr = new XMLHttpRequest();
     const formData = new FormData();
-    xhr.withCredentials = true;
-    xhr.responseType = 'json';
     
+
     
     if (options.method === 'GET') {
         options.url += `?`;
@@ -28,8 +26,9 @@ const createRequest = (options = {}) => {
         for (let key in options.data) {
             formData.append(key, options.data[key]);
         }
-
     }
+
+
 
 
     try {
