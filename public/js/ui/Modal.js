@@ -13,13 +13,11 @@ class Modal {
    * */
 
   constructor(element){
-    if (!element) {
+    if(!element){
       throw new Error('Ошибка! element не может быть пустым');
-    } 
-    else {
-      this.element = element;
-      this.registerEvents();
     }
+    this.element = element;
+    this.registerEvents();
   }
 
   /**
